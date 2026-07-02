@@ -1,34 +1,43 @@
 body{
     margin:0;
-    font-family:Arial, sans-serif;
+    font-family:Arial,sans-serif;
     background:#0f172a;
     color:white;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
 }
 
 h1{
-    margin-bottom:20px;
+    text-align:center;
+    padding:20px;
 }
 
-button{
-    padding:12px 24px;
-    font-size:18px;
-    border:none;
-    border-radius:10px;
-    background:#2563eb;
-    color:white;
+#desktop{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(100px,1fr));
+    gap:20px;
+    padding:20px;
+}
+
+.icon{
+    text-align:center;
+    padding:15px;
+    border-radius:12px;
     cursor:pointer;
+    background:rgba(255,255,255,0.08);
+    transition:0.3s;
 }
 
-button:hover{
-    background:#1d4ed8;
+.icon:hover{
+    background:rgba(255,255,255,0.18);
 }
 
-#text{
-    margin-top:20px;
-    font-size:18px;
+#windowArea{
+    margin:20px;
+}
+
+.window{
+    background:white;
+    color:black;
+    border-radius:12px;
+    padding:20px;
+    box-shadow:0 0 20px rgba(0,0,0,.3);
 }
