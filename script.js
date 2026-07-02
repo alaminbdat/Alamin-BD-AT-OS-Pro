@@ -1,1 +1,55 @@
-https://chatgpt.com/backend-api/estuary/content?id=file_00000000e74871fa859e3923396f92d8&fn=script_fixed.js&cd=attachment&ts=495286&p=fs&cid=1&sig=8d2990179c9ebd7211ba5f789d7d3822898d4f2de195004b1a9d123e1538cf00&v=0
+document.addEventListener("DOMContentLoaded", () => {
+
+const windowArea = document.getElementById("windowArea");
+const startButton = document.getElementById("startButton");
+const startMenu = document.getElementById("startMenu");
+const clock = document.getElementById("clock");
+
+function openWindow(title, content){
+    windowArea.innerHTML = `
+    <div class="window">
+        <h2>${title}</h2>
+        <hr>
+        ${content}
+    </div>`;
+}
+
+document.getElementById("fileExplorer").onclick = () =>
+openWindow("📁 File Explorer","<p>File Explorer Ready.</p>");
+
+document.getElementById("browser").onclick = () =>
+openWindow("🌐 Browser","<p>Browser Ready.</p>");
+
+document.getElementById("notepad").onclick = () =>
+openWindow("📝 Notepad",
+"<textarea style='width:100%;height:250px'></textarea>");
+
+document.getElementById("settings").onclick = () =>
+openWindow("⚙️ Settings","<p>Settings Ready.</p>");
+
+document.getElementById("garments").onclick = () =>
+openWindow("🏭 Garments Tools",`
+<button onclick="window.location.href='GIRLS SHACKET-G074 Up.xlsx';">📊 Excel Production Sheet</button><br><br>
+<button>📋 Daily Report</button><br><br>
+<button>📦 Shipment Report</button><br><br>
+<button>🧮 SMV Calculator</button><br><br>
+<button>📈 Efficiency Calculator</button>
+`);
+
+startButton.onclick = () => {
+    if(startMenu.style.display==="block"){
+        startMenu.style.display="none";
+    }else{
+        startMenu.style.display="block";
+    }
+};
+
+function updateClock(){
+    const now = new Date();
+    clock.innerHTML = now.toLocaleTimeString();
+}
+
+setInterval(updateClock,1000);
+updateClock();
+
+});
