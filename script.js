@@ -12,7 +12,24 @@ function openWindow(title, content){
 }
 
 document.getElementById("fileExplorer").onclick = () =>
-    openWindow("📁 File Explorer","<p>File Explorer Ready.</p>");
+openWindow("📁 File Explorer",`
+<div style="padding:10px">
+<h3>Quick Access</h3>
+
+<button onclick="alert('📂 Documents Folder')">📄 Documents</button><br><br>
+
+<button onclick="alert('📥 Downloads Folder')">📥 Downloads</button><br><br>
+
+<button onclick="alert('🖼 Pictures Folder')">🖼 Pictures</button><br><br>
+
+<button onclick="alert('🎥 Videos Folder')">🎥 Videos</button><br><br>
+
+<button onclick="window.open('./GIRLS SHACKET-G074 Up.xlsx','_blank')">
+📊 Excel Production Sheet
+</button>
+
+</div>
+`);
 
 document.getElementById("browser").onclick = () =>
     window.open("https://www.google.com","_blank");
