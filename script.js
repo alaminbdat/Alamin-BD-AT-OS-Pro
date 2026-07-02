@@ -1,9 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
 const windowArea = document.getElementById("windowArea");
-const startButton = document.getElementById("startButton");
-const startMenu = document.getElementById("startMenu");
-const clock = document.getElementById("clock");
 
 function openWindow(title, content){
     windowArea.innerHTML = `
@@ -15,40 +12,37 @@ function openWindow(title, content){
 }
 
 document.getElementById("fileExplorer").onclick = () =>
-openWindow("📁 File Explorer","<p>File Explorer Ready.</p>");
+    openWindow("📁 File Explorer","<p>File Explorer Ready.</p>");
 
 document.getElementById("browser").onclick = () =>
-openWindow("🌐 Browser","<p>Browser Ready.</p>");
+    window.open("https://www.google.com","_blank");
+
+document.getElementById("edge").onclick = () =>
+    window.open("https://www.microsoft.com/edge","_blank");
 
 document.getElementById("notepad").onclick = () =>
-openWindow("📝 Notepad",
-"<textarea style='width:100%;height:250px'></textarea>");
+    openWindow("📝 Notepad",
+    "<textarea style='width:100%;height:250px'></textarea>");
 
 document.getElementById("settings").onclick = () =>
-openWindow("⚙️ Settings","<p>Settings Ready.</p>");
+    openWindow("⚙️ Settings","<p>Settings Ready.</p>");
 
 document.getElementById("garments").onclick = () =>
-openWindow("🏭 Garments Tools",`
-<button onclick="window.open('./GIRLS SHACKET-G074 Up.xlsx','_blank')">
-📊 Excel Production Sheet
-</button><br><br>
-<button>📋 Daily Report</button><br><br>
-<button>📦 Shipment Report</button><br><br>
-<button>🧮 SMV Calculator</button><br><br>
-<button>📈 Efficiency Calculator</button>
-`);
+    openWindow("🏭 Garments Tools",
+    `<button onclick="window.open('./GIRLS SHACKET-G074 Up.xlsx','_blank')">📊 Excel Production Sheet</button>`);
+
+const startButton = document.getElementById("startButton");
+const startMenu = document.getElementById("startMenu");
 
 startButton.onclick = () => {
-    if(startMenu.style.display==="block"){
-        startMenu.style.display="none";
-    }else{
-        startMenu.style.display="block";
-    }
+    startMenu.style.display =
+        startMenu.style.display === "block" ? "none" : "block";
 };
 
+const clock = document.getElementById("clock");
+
 function updateClock(){
-    const now = new Date();
-    clock.innerHTML = now.toLocaleTimeString();
+    clock.innerHTML = new Date().toLocaleTimeString();
 }
 
 setInterval(updateClock,1000);
