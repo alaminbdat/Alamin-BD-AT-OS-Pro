@@ -29,10 +29,12 @@ openWindow("⚙️ Settings","<p>Settings Ready.</p>");
 
 document.getElementById("garments").onclick = () =>
 openWindow("🏭 Garments Tools",`
-<button onclick="alert('Excel Production Sheet Coming Soon')">📊 Excel Production Sheet</button><br><br>
+<button onclick="window.location.href='GIRLS SHACKET-G074 Up.xlsx';">📊 Excel Production Sheet</button><br><br>
 <button>📋 Daily Report</button><br><br>
 <button>📦 Shipment Report</button><br><br>
 <button>🧮 SMV Calculator</button><br><br>
+<button>📈 Efficiency Calculator</button>
+`);
 <button>📈 Efficiency Calculator</button>
 `);
 
