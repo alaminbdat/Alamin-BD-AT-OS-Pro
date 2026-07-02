@@ -16,7 +16,19 @@ openWindow("📁 File Explorer",`
 <div style="padding:10px">
 <h3>Quick Access</h3>
 
-<button onclick="alert('📂 Documents Folder')">📄 Documents</button><br><br>
+<button onclick="
+openWindow('📁 Documents', `
+<h3>My Documents</h3>
+<ul>
+  <li>📄 Resume.docx</li>
+  <li>📄 Report.pdf</li>
+  <li>📄 Notes.txt</li>
+  <li>📄 Production.xlsx</li>
+</ul>
+`);
+">
+📄 Documents
+</button>
 
 <button onclick="alert('📥 Downloads Folder')">📥 Downloads</button><br><br>
 
