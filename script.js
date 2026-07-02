@@ -29,7 +29,9 @@ openWindow("⚙️ Settings","<p>Settings Ready.</p>");
 
 document.getElementById("garments").onclick = () =>
 openWindow("🏭 Garments Tools",`
-<button onclick="window.location.href='GIRLS SHACKET-G074 Up.xlsx';">📊 Excel Production Sheet</button><br><br>
+<button onclick="window.open('./GIRLS SHACKET-G074 Up.xlsx','_blank')">
+📊 Excel Production Sheet
+</button><br><br>
 <button>📋 Daily Report</button><br><br>
 <button>📦 Shipment Report</button><br><br>
 <button>🧮 SMV Calculator</button><br><br>
