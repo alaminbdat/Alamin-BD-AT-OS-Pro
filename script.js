@@ -57,8 +57,8 @@ document.getElementById("settings").onclick = () =>
     openWindow("⚙️ Settings","<p>Settings Ready.</p>");
 
 document.getElementById("garments").onclick = () =>
-    openWindow("🏭 Garments Tools",
-    `
+   openWindow("🏭 Garments Tools",
+`
 <button onclick="window.open('./GIRLS SHACKET-G074 Up.xlsx','_blank')">
 📊 Excel Production Sheet
 </button><br><br>
@@ -67,7 +67,7 @@ document.getElementById("garments").onclick = () =>
 <button>📦 Shipment Report</button><br><br>
 <button>🧮 SMV Calculator</button><br><br>
 <button>📈 Efficiency Calculator</button>
-`);
+`); 
 
 const startButton = document.getElementById("startButton");
 const startMenu = document.getElementById("startMenu");
